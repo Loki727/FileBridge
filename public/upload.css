@@ -1,0 +1,64 @@
+.dropzone {
+    height: 10vh;
+    border: 2px dashed #90caf9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    overflow: visible;
+}
+
+.dropzone.hover {
+    background-color: #e3f2fd;
+    border-color: #42a5f5;
+}
+
+.file-input {
+    opacity: 0;
+    width: 150%;
+    height: 20vh;
+    position: relative;
+    top: -35px;
+    left: -50px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #5472d3;
+}
+.file-label{
+    color: #42a5f5;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    top: -200%;
+    z-index: 5;
+}
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button.submit {
+    background-color: #1976d2;
+    color: #ffffff;
+}
+
+.button.submit:hover {
+    background-color: #42a5f5;
+}
+
+.button.back {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
+
+.button.back:hover {
+    background-color: #5472d3;
+}

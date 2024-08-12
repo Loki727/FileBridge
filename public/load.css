@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 300px; /* Możesz dostosować wysokość */
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.file-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.file-button i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.file-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transform: translateY(12%);
+}
+.file-button .fas {
+    color: black;
+    transform: translateY(50%);
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.file-button:hover {
+    background-color: #bbdefb;
+    border-color: #42a5f5;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button.submit {
+    background-color: #1976d2;
+    color: #ffffff;
+}
+
+.button.submit:hover {
+    background-color: #42a5f5;
+}
+
+.button.back {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
+
+.button.back:hover {
+    background-color: #5472d3;
+}

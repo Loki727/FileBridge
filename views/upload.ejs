@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wysyłanie plików</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="dropzone" ondrop="handleDrop(event)" ondragover="allowDrop(event)" ondragenter="highlight(event)" ondragleave="unhighlight(event)">
+                <input class="file-input" type="file" name="file" required>
+                <span class="file-label">Przeciągnij i upuść plik tutaj lub kliknij, aby wybrać</span>
+            </div>
+            <button class="button submit" type="submit">Załaduj plik</button>
+        </form>
+        <button class="button back" onclick="goBack()">Wróć na stronę główną</button>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = '/';
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            unhighlight(event); // Usunięcie podświetlenia po upuszczeniu pliku
+            const files = event.dataTransfer.files;
+            document.querySelector('.file-input').files = files; // Przypisanie plików do input
+            updateFileName(); // Aktualizacja nazwy pliku
+        }
+
+        function highlight(event) {
+            event.preventDefault();
+            document.querySelector('.dropzone').classList.add('hover');
+        }
+
+        function unhighlight(event) {
+            event.preventDefault();
+            document.querySelector('.dropzone').classList.remove('hover');
+        }
+
+        function updateFileName() {
+            const fileInput = document.querySelector('.file-input');
+            const fileLabel = document.querySelector('.file-label');
+            if (fileInput.files.length > 0) {
+                fileLabel.textContent = fileInput.files[0].name;
+            } else {
+                fileLabel.textContent = 'Przeciągnij i upuść plik tutaj lub kliknij, aby wybrać';
+            }
+        }
+    </script>
+    </script>
+</body>
+</html>
